@@ -5,9 +5,3 @@ png("XOMA-MovAvg.png")
 ggplot(data=xoma, aes(x=Date, y=X5MA.20MA, group = "date")) + 
     geom_line() + labs (title = "XOMA - 5 Day Mov Avg minus 20 Day Mov Avg")
 dev.off()
-
-ggplot(joinsByWeek, aes(x = week)) + 
-    geom_line(aes(y = rolling), colour="blue") + 
-    geom_line(aes(y = actual), colour = "grey") + 
-    ylab(label="Number of new members") + 
-    xlab("Week")
